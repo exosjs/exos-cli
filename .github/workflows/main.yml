@@ -23,14 +23,14 @@ jobs:
     
     # Print branch name
     - name: Branch name
-      run: echo running on branch ${github.ref}
+      run: echo running on branch ${{ github.ref }}
 
     # Runs a single command using the runners shell
     - name: Semantic Release
       id: semantic-release   # Need an `id` for output variables
       uses: cycjimmy/semantic-release-action@v2
       with:
-        dry-run: ${github.ref == "refs/head/master"}
+        dry-run: ${{ github.ref != "refs/head/master" }} # Only publish in the master branch
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
