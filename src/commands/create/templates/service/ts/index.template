@@ -1,0 +1,2 @@
+import * as entityNameService from "./entityNameService";
+export { entityNameService };
