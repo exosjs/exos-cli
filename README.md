@@ -12,7 +12,7 @@ It currently provides the following packages:
 - [Exos Script](https://github.com/exosjs/exos-scripts): a set of out-of-the-box extensible scripts that helps you with the lifecycle of your React + TypeScript applications.
 - [Exos Core](https://github.com/exosjs/exos-core): a library with core scripts that helps you to develop your React + TypeScript application and micro frontends.
 
-# Exos CLI ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![npm version](https://img.shields.io/npm/v/exos-cli.svg?style=flat)](https://www.npmjs.com/package/exos-cli)
+# Exos CLI ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![npm version](https://img.shields.io/npm/v/exos-cli.svg?style=flat)](https://www.npmjs.com/package/exos-cli)
 
 Exos CLI is a command line interface tool for React + TypeScript applications.
 
