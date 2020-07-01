@@ -34,7 +34,7 @@ npx exos-cli
 
 You will visualize the **help** information of the CLI displaying the current commands. Each command can be executed directly by calling `npx exos-cli <command>`, and you will be prompted with the command parameters/options.
 
-> **Pro tip!** Remember that you can also enter all the parameters when you run it. For example `npx exos-cli init --name=MyApp --type=ReactApp`.
+> **Pro tip!** You can also enter all the parameters when you run it. For example `npx exos-cli init --name=MyApp --type=ReactApp`.
 
 ### Available commands
 
