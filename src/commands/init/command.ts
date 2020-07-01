@@ -123,7 +123,11 @@ export default function command(argv: CommandArguments): void {
   console.log();
 
   console.log(chalk.cyan(`npm run lint`));
-  console.log("  Validates the code syntax in your files.");
+  console.log("  Validates the code syntax in your code files.");
+  console.log();
+
+  console.log(chalk.cyan(`npm run stylelintlint`));
+  console.log("  Validates the code syntax in your CSS files.");
   console.log();
 
   console.log("We suggest that you begin by typing:");

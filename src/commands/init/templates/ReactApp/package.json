@@ -16,6 +16,7 @@
   "homepage": "https://github.com/owner/entityName#readme",
   "scripts": {
     "lint": "exos-scripts lint",
+    "stylelint": "exos-scripts stylelint",
     "test": "exos-scripts test",
     "start": "exos-scripts start",
     "build": "exos-scripts build"
