@@ -18,7 +18,7 @@
     "start": "node .",
     "debug": "node --nolazy --inspect-brk=9229 ./dist/exos-cli.js init",
     "prepublishOnly": "npm run build",
-    "publish": "semantic-release --branches='.*' --ci=true --dry-run=true"
+    "publish": "semantic-release"
   },
   "repository": {
     "type": "git",
