@@ -32,7 +32,7 @@ jobs:
         run: npm run lint
 
       - name: Publish package to npm
-        if: ${{ github.head_ref == 'master' }}
+        if: ${{ github.ref == 'refs/heads/master' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
