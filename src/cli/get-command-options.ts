@@ -1,10 +1,8 @@
-const defaultOptions = {
+import type { Option } from "yargs-interactive";
+
+const defaultOptions: Option = {
   interactive: { describe: "Use interactive mode", default: true },
 };
-
-interface CommandOption {
-  default: unknown;
-}
 
 /**
  * Check current options and decide what to do.
@@ -12,9 +10,11 @@ interface CommandOption {
  * using the other properties as default values
  * @param commandOptions
  */
-function getCommandOptions(commandOptions: CommandOption[]): unknown {
-  const toReturn = Object.assign({}, defaultOptions, commandOptions);
-  return toReturn;
+function getCommandOptions(commandOptions: Option): Option {
+  return {
+    ...defaultOptions,
+    ...commandOptions,
+  };
 }
 
 export default getCommandOptions;

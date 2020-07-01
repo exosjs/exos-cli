@@ -4,7 +4,17 @@ import getCliVersion from "./get-cli-version";
 import getCommandOptions from "./get-command-options";
 import chalk from "chalk";
 
-const yargsConfig = yargsInteractive();
+// temporary fix until yargs.interactive is updated
+import type { Argv } from "yargs";
+import type { Option } from "yargs-interactive";
+
+interface Interactive extends Argv {
+  usage(usage: string): Interactive;
+  interactive(options: Option): Interactive;
+  then(callback: (result: unknown) => unknown): Interactive;
+}
+
+const yargsConfig = yargsInteractive() as Interactive;
 
 /*
  * This CLI has two levels:
@@ -24,12 +34,10 @@ availableCommands.forEach((command) => {
     // Run yargsInteractive again to obtain the command options.
     // Use interactive mode is a property is missing.
     // Execute the command handler at the end.
-    return yargsInteractive()
-      .interactive(commandOptions as any)
-      .then(commandHandler);
+    return yargsInteractive().interactive(commandOptions).then(commandHandler);
   };
 
-  (yargsConfig as any).command(command);
+  yargsConfig.command(command);
 });
 
 export default function cli(): unknown {
@@ -41,10 +49,6 @@ export default function cli(): unknown {
   console.log();
 
   // Run yargsInteractive for the first time to obtain the command to use
-  return (yargsConfig as any)
-    .usage("$0 <command> [args]")
-    .demandCommand(1, 1, "You need to specify a command before moving on")
-    .help()
-    .wrap(null)
-    .version(cliVersion).argv;
+  return yargsConfig.usage("$0 <command> [args]").demandCommand(1, 1, "You need to specify a command before moving on").help().wrap(null).version(cliVersion)
+    .argv;
 }
