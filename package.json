@@ -47,7 +47,7 @@
     "@types/node": "^14.0.14",
     "@types/yargs-interactive": "^2.1.0",
     "chalk": "^4.0.0",
-    "exos-scripts": "^1.0.2",
+    "exos-scripts": "^1.0.3",
     "semantic-release": "^17.1.1",
     "typescript": "^3.9.5"
   }
