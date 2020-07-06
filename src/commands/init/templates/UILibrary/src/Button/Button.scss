@@ -1,0 +1,8 @@
+.button {
+  font-weight: bold;
+
+  &:disabled {
+    font-weight: normal;
+    color: gray;
+  }
+}

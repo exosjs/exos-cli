@@ -1,0 +1,16 @@
+import React from "react";
+import type { Props } from './types';
+import styles from "./Button.scss";
+
+export default class Buttton extends React.PureComponent<Props> {
+  static defaultProps: Partial<Props> = {
+    children: "This is a button",
+    disabled: false,
+    onClick: () => {},
+  }
+
+  render(): React.ReactNode {
+    const { children, disabled, onClick } = this.props;
+    return <button disabled={disabled} className={styles.button} onClick={onClick}>{children}</button>;
+  }
+}

@@ -1,6 +1,7 @@
 export enum AppTypes {
   ReactApp = "ReactApp",
   Library = "Library",
+  UILibrary = "UILibrary",
 }
 
 export interface CommandArguments {

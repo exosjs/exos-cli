@@ -1,0 +1,22 @@
+import React from "react";
+import { action } from "@storybook/addon-actions";
+import { boolean, text } from "@storybook/addon-knobs";
+
+import Button from "./Button";
+
+export default {
+  component: Button,
+  title: "Button",
+};
+
+export const basic = (): React.ReactNode => {
+  const disabled = boolean("Disabled", false);
+  const content = text("Content", "Hello button 😎");
+  const onClick = action("clicked");
+
+  return (
+    <Button disabled={disabled} onClick={onClick}>
+      {content}
+    </Button>
+  );
+};

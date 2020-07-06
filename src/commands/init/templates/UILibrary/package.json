@@ -1,0 +1,26 @@
+{
+  "name": "entityName",
+  "version": "0.0.1",
+  "description": "TBC",
+  "types": "./dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owner/entityName"
+  },
+  "keywords": [],
+  "author": "AuthorName",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/owner/entityName/issues"
+  },
+  "homepage": "https://github.com/owner/entityName#readme",
+  "scripts": {
+    "lint": "exos-scripts lint",
+    "stylelint": "exos-scripts stylelint",
+    "test": "exos-scripts test",
+    "start": "start-storybook -p 9001 -c .storybook",
+    "build": "exos-scripts build"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

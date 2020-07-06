@@ -70,6 +70,10 @@ function installDependencies(appType: string, appFolderName: string): void {
       dependencies: ["react", "react-dom", "tslib"],
       devDependencies: ["@types/jest", "@types/react", "@types/react-dom", "exos-scripts", "typescript"],
     },
+    [AppTypes.UILibrary]: {
+      dependencies: ["react", "react-dom", "tslib"],
+      devDependencies: ["@storybook/addon-a11y", "@storybook/addon-actions", "@storybook/addon-knobs", "@storybook/react", "exos-scripts", "typescript"],
+    },
   };
 
   console.log("Installing dependencies..");

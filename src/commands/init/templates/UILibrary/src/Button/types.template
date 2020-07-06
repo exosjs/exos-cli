@@ -1,0 +1,8 @@
+export interface Props {
+  /** Content to display inside the button */
+  children?: React.ReactNode;
+  /** True if the component is disabled. False otherwise */
+  disabled?: boolean;
+  /** Action executed when users click the button */
+  onClick?: () => unknown;
+}
